@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181121 22:42:47.417" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/muhammadyazid/Documents/instagram/RF/tests/login_tests.robot" id="s1" name="Login Tests">
+<test id="s1-t1" name="Valid Login">
+<kw name="Login with Valid Credentials">
+<arguments>
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+</arguments>
+<kw name="GIVEN Open Browser To Login Page">
+<kw name="Open Login Page Using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20181121 22:42:47.850" level="INFO">Opening browser 'Chrome' to base url 'https://www.instagram.com/accounts/login/'.</msg>
+<status status="PASS" endtime="20181121 22:42:55.169" starttime="20181121 22:42:47.850"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:55.169" starttime="20181121 22:42:47.849"></status>
+</kw>
+<kw name="Login Page Opened" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:42:55.253" starttime="20181121 22:42:55.171"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:42:55.292" starttime="20181121 22:42:55.254"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:55.292" starttime="20181121 22:42:55.170"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:55.292" starttime="20181121 22:42:47.848"></status>
+</kw>
+<kw name="WHEN Input Username And Password">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Username" library="login_pages">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181121 22:42:55.294" level="INFO">Typing text 'Yazid_Akun_Testing' into text field '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20181121 22:42:55.760" starttime="20181121 22:42:55.294"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:55.760" starttime="20181121 22:42:55.293"></status>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:42:55.805" starttime="20181121 22:42:55.761"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:55.805" starttime="20181121 22:42:55.760"></status>
+</kw>
+<kw name="Input Pass" library="login_pages">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181121 22:42:55.806" level="INFO">Typing text 'akuntesting' into text field '//input[@name='password']'.</msg>
+<status status="PASS" endtime="20181121 22:42:56.047" starttime="20181121 22:42:55.806"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:56.047" starttime="20181121 22:42:55.805"></status>
+</kw>
+<kw name="Show Password Button Should Be Visible" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SHOWPASSWORD_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:42:56.086" starttime="20181121 22:42:56.049"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:56.086" starttime="20181121 22:42:56.048"></status>
+</kw>
+<kw name="Click Login Button" library="login_pages">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181121 22:42:56.087" level="INFO">Clicking element '//button[@type='submit'][text()='Log in']'.</msg>
+<status status="PASS" endtime="20181121 22:42:56.179" starttime="20181121 22:42:56.086"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:56.179" starttime="20181121 22:42:56.086"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:42:56.180" starttime="20181121 22:42:55.293"></status>
+</kw>
+<kw name="THEN Login Success">
+<kw name="Home Page Opened" library="home_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${IG_LOGO}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:03.035" starttime="20181121 22:42:56.182"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PROFILE_ICON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:03.075" starttime="20181121 22:43:03.036"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PROFILE_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:03.112" starttime="20181121 22:43:03.076"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:03.112" starttime="20181121 22:42:56.182"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181121 22:43:03.228" starttime="20181121 22:43:03.112"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:03.228" starttime="20181121 22:42:56.181"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:03.228" starttime="20181121 22:42:47.847"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:03.229" critical="yes" starttime="20181121 22:42:47.846"></status>
+</test>
+<test id="s1-t2" name="Invalid Login">
+<kw name="Login with Invalid Credentials">
+<arguments>
+<arg>${valid_username}</arg>
+<arg>${invalid_data}</arg>
+</arguments>
+<kw name="GIVEN Open Browser To Login Page">
+<kw name="Open Login Page Using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20181121 22:43:03.240" level="INFO">Opening browser 'Chrome' to base url 'https://www.instagram.com/accounts/login/'.</msg>
+<status status="PASS" endtime="20181121 22:43:09.661" starttime="20181121 22:43:03.240"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:09.662" starttime="20181121 22:43:03.239"></status>
+</kw>
+<kw name="Login Page Opened" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:09.738" starttime="20181121 22:43:09.664"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:09.778" starttime="20181121 22:43:09.738"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:09.778" starttime="20181121 22:43:09.662"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:09.778" starttime="20181121 22:43:03.238"></status>
+</kw>
+<kw name="WHEN Input Username And Password">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Username" library="login_pages">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:09.781" level="INFO">Typing text 'Yazid_Akun_Testing' into text field '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20181121 22:43:10.268" starttime="20181121 22:43:09.780"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:10.268" starttime="20181121 22:43:09.779"></status>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:10.308" starttime="20181121 22:43:10.270"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:10.308" starttime="20181121 22:43:10.269"></status>
+</kw>
+<kw name="Input Pass" library="login_pages">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:10.310" level="INFO">Typing text 'qwerty' into text field '//input[@name='password']'.</msg>
+<status status="PASS" endtime="20181121 22:43:10.470" starttime="20181121 22:43:10.309"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:10.470" starttime="20181121 22:43:10.309"></status>
+</kw>
+<kw name="Show Password Button Should Be Visible" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SHOWPASSWORD_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:10.509" starttime="20181121 22:43:10.471"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:10.509" starttime="20181121 22:43:10.471"></status>
+</kw>
+<kw name="Click Login Button" library="login_pages">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:10.512" level="INFO">Clicking element '//button[@type='submit'][text()='Log in']'.</msg>
+<status status="PASS" endtime="20181121 22:43:10.615" starttime="20181121 22:43:10.511"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:10.616" starttime="20181121 22:43:10.510"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:10.616" starttime="20181121 22:43:09.778"></status>
+</kw>
+<kw name="THEN Login Failed">
+<kw name="Error Message Displayed" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ERROR_MESSAGE}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:11.314" starttime="20181121 22:43:10.618"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:11.314" starttime="20181121 22:43:10.618"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181121 22:43:11.411" starttime="20181121 22:43:11.315"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:11.411" starttime="20181121 22:43:10.617"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:11.412" starttime="20181121 22:43:03.236"></status>
+</kw>
+<kw name="Login with Invalid Credentials">
+<arguments>
+<arg>${invalid_data}</arg>
+<arg>${valid_password}</arg>
+</arguments>
+<kw name="GIVEN Open Browser To Login Page">
+<kw name="Open Login Page Using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20181121 22:43:11.417" level="INFO">Opening browser 'Chrome' to base url 'https://www.instagram.com/accounts/login/'.</msg>
+<status status="PASS" endtime="20181121 22:43:16.934" starttime="20181121 22:43:11.416"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:16.934" starttime="20181121 22:43:11.415"></status>
+</kw>
+<kw name="Login Page Opened" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:17.027" starttime="20181121 22:43:16.936"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:17.069" starttime="20181121 22:43:17.027"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:17.070" starttime="20181121 22:43:16.935"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:17.070" starttime="20181121 22:43:11.414"></status>
+</kw>
+<kw name="WHEN Input Username And Password">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Username" library="login_pages">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:17.074" level="INFO">Typing text 'qwerty' into text field '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20181121 22:43:17.344" starttime="20181121 22:43:17.072"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:17.344" starttime="20181121 22:43:17.071"></status>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:17.399" starttime="20181121 22:43:17.345"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:17.399" starttime="20181121 22:43:17.344"></status>
+</kw>
+<kw name="Input Pass" library="login_pages">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:17.400" level="INFO">Typing text 'akuntesting' into text field '//input[@name='password']'.</msg>
+<status status="PASS" endtime="20181121 22:43:17.740" starttime="20181121 22:43:17.400"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:17.740" starttime="20181121 22:43:17.400"></status>
+</kw>
+<kw name="Show Password Button Should Be Visible" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SHOWPASSWORD_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:17.779" starttime="20181121 22:43:17.742"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:17.779" starttime="20181121 22:43:17.741"></status>
+</kw>
+<kw name="Click Login Button" library="login_pages">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:17.780" level="INFO">Clicking element '//button[@type='submit'][text()='Log in']'.</msg>
+<status status="PASS" endtime="20181121 22:43:17.892" starttime="20181121 22:43:17.780"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:17.892" starttime="20181121 22:43:17.779"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:17.892" starttime="20181121 22:43:17.070"></status>
+</kw>
+<kw name="THEN Login Failed">
+<kw name="Error Message Displayed" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ERROR_MESSAGE}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:18.376" starttime="20181121 22:43:17.894"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:18.376" starttime="20181121 22:43:17.893"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181121 22:43:18.469" starttime="20181121 22:43:18.377"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:18.469" starttime="20181121 22:43:17.893"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:18.469" starttime="20181121 22:43:11.412"></status>
+</kw>
+<kw name="Login with Invalid Credentials">
+<arguments>
+<arg>${invalid_data}</arg>
+<arg>${invalid_data}</arg>
+</arguments>
+<kw name="GIVEN Open Browser To Login Page">
+<kw name="Open Login Page Using Chrome Browser" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${LOGIN_PAGE}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20181121 22:43:18.473" level="INFO">Opening browser 'Chrome' to base url 'https://www.instagram.com/accounts/login/'.</msg>
+<status status="PASS" endtime="20181121 22:43:24.750" starttime="20181121 22:43:18.472"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:24.751" starttime="20181121 22:43:18.472"></status>
+</kw>
+<kw name="Login Page Opened" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:24.848" starttime="20181121 22:43:24.752"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:24.893" starttime="20181121 22:43:24.849"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:24.893" starttime="20181121 22:43:24.751"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:24.894" starttime="20181121 22:43:18.471"></status>
+</kw>
+<kw name="WHEN Input Username And Password">
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Username" library="login_pages">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${USERNAME_FIELD}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:24.897" level="INFO">Typing text 'qwerty' into text field '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20181121 22:43:25.176" starttime="20181121 22:43:24.896"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:25.176" starttime="20181121 22:43:24.895"></status>
+</kw>
+<kw name="Login Button Should Be Enabled" library="login_pages">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:25.233" starttime="20181121 22:43:25.177"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:25.234" starttime="20181121 22:43:25.177"></status>
+</kw>
+<kw name="Input Pass" library="login_pages">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:25.236" level="INFO">Typing text 'qwerty' into text field '//input[@name='password']'.</msg>
+<status status="PASS" endtime="20181121 22:43:25.499" starttime="20181121 22:43:25.235"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:25.500" starttime="20181121 22:43:25.234"></status>
+</kw>
+<kw name="Show Password Button Should Be Visible" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${SHOWPASSWORD_BUTTON}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:25.555" starttime="20181121 22:43:25.501"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:25.556" starttime="20181121 22:43:25.500"></status>
+</kw>
+<kw name="Click Login Button" library="login_pages">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20181121 22:43:25.558" level="INFO">Clicking element '//button[@type='submit'][text()='Log in']'.</msg>
+<status status="PASS" endtime="20181121 22:43:25.685" starttime="20181121 22:43:25.557"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:25.685" starttime="20181121 22:43:25.556"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:25.685" starttime="20181121 22:43:24.894"></status>
+</kw>
+<kw name="THEN Login Failed">
+<kw name="Error Message Displayed" library="login_pages">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ERROR_MESSAGE}</arg>
+</arguments>
+<status status="PASS" endtime="20181121 22:43:26.167" starttime="20181121 22:43:25.687"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:26.167" starttime="20181121 22:43:25.686"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181121 22:43:26.258" starttime="20181121 22:43:26.167"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:26.258" starttime="20181121 22:43:25.686"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:26.258" starttime="20181121 22:43:18.469"></status>
+</kw>
+<status status="PASS" endtime="20181121 22:43:26.259" critical="yes" starttime="20181121 22:43:03.233"></status>
+</test>
+<status status="PASS" endtime="20181121 22:43:26.260" starttime="20181121 22:42:47.422"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login Tests" pass="2">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
