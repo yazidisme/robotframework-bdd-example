@@ -4,7 +4,7 @@ Resource          ../pages/login_pages.robot
 Resource          ../pages/home_pages.robot
 
 *** Variables ***
-${valid_username}       yazid_akun_testing
+${valid_username}       Yazid_Akun_Testing
 ${valid_password}       YOUR_VALID_PASSWORD
 ${invalid_data}         qwerty
 
