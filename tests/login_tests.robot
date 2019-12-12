@@ -2,6 +2,8 @@
 Resource          ../resources.robot
 Resource          ../pages/login_pages.robot
 Resource          ../pages/home_pages.robot
+Test Setup        Open Login Page Using Chrome Browser
+Test Teardown     Close Browser
 
 *** Variables ***
 ${valid_username}       Yazid_Akun_Testing
@@ -11,12 +13,12 @@ ${invalid_data}         qwerty
 *** Test Cases ***
 Valid Login
   [Template]    Login with Valid Credentials
-  ##username   password
+  # username   password
   ${valid_username}   ${valid_password}
 
 Invalid Login
   [Template]    Login with Invalid Credentials
-  #username   password
+  # username   password
   ${valid_username}   ${invalid_data}
   ${invalid_data}   ${valid_password}
   ${invalid_data}   ${invalid_data}
@@ -24,19 +26,15 @@ Invalid Login
 *** Keywords ***
 Login with Valid Credentials
   [Arguments]   ${username}   ${password}
-  GIVEN Open Browser To Login Page
+  GIVEN Login Page Opened
   WHEN Input Username And Password    ${username}    ${password}
-  THEN Login Success
+  THEN Home Page Opened
 
 Login with Invalid Credentials
   [Arguments]   ${username}   ${password}
-  GIVEN Open Browser To Login Page
+  GIVEN Login Page Opened
   WHEN Input Username And Password    ${username}    ${password}
-  THEN Login Failed
-
-Open Browser To Login Page
-  Open Login Page Using Chrome Browser
-  Login Page Opened
+  THEN Error Message Displayed
 
 Input Username And Password
   [Arguments]   ${username}   ${password}
@@ -45,11 +43,3 @@ Input Username And Password
   Input Pass                                  ${password}
   Show Password Button Should Be Visible
   Click Login Button
-
-Login Success
-  Home Page Opened
-  [Teardown]    Close Browser
-
-Login Failed
-  Error Message Displayed
-  [Teardown]    Close Browser
