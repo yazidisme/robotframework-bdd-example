@@ -2,6 +2,7 @@
 Resource          ../resources.robot
 Resource          ../pages/login_pages.robot
 Resource          ../pages/home_pages.robot
+Resource          ../steps/login_steps.robot
 Test Setup        Open Login Page Using Chrome Browser
 Test Teardown     Close Browser
 
@@ -35,11 +36,3 @@ Login with Invalid Credentials
   GIVEN Login Page Opened
   WHEN Input Username And Password    ${username}    ${password}
   THEN Error Message Displayed
-
-Input Username And Password
-  [Arguments]   ${username}   ${password}
-  Input Username                              ${username}
-  Login Button Should Be Enabled
-  Input Pass                                  ${password}
-  Show Password Button Should Be Visible
-  Click Login Button
