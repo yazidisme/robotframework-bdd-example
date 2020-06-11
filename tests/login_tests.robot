@@ -13,9 +13,9 @@ ${invalid_data}         qwerty
 
 *** Test Cases ***
 Valid Login
-  [Template]    Login with Valid Credentials
-  # username   password
-  ${valid_username}   ${valid_password}
+  GIVEN Login Page Opened
+  WHEN Input Username And Password    ${valid_username}    ${valid_password}
+  THEN Home Page Opened
 
 Invalid Login
   [Template]    Login with Invalid Credentials
@@ -25,12 +25,6 @@ Invalid Login
   ${invalid_data}   ${invalid_data}
 
 *** Keywords ***
-Login with Valid Credentials
-  [Arguments]   ${username}   ${password}
-  GIVEN Login Page Opened
-  WHEN Input Username And Password    ${username}    ${password}
-  THEN Home Page Opened
-
 Login with Invalid Credentials
   [Arguments]   ${username}   ${password}
   GIVEN Login Page Opened
