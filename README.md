@@ -88,7 +88,7 @@ This is automated web testing for any web application. Its using page object mod
   $ robot -d result/ tests/
   ```
 4. Wait until [tests executing has finished](https://prnt.sc/lllrxi)
-5. See the output of tests result in the result folder then open `log.html` using your browser
+5. See the output of tests result in the result folder then open `log.html` or `report.html` using your browser
 6. See the [log of tests result](http://prntscr.com/lllt0q)
 7. See the [report of tests result](http://prntscr.com/llltea)
 
