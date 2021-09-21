@@ -5,7 +5,7 @@ Resource          ../pages/login_pages.robot
 Input Username And Password
   [Arguments]   ${username}   ${password}
   Input Username                              ${username}
-  Login Button Should Be Enabled
   Input Pass                                  ${password}
   Show Password Button Should Be Visible
+  Login Button Should Be Enabled
   Click Login Button

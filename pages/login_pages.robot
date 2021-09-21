@@ -4,7 +4,7 @@ Library       SeleniumLibrary
 *** Variables ***
 ${USERNAME_FIELD}             //input[@name='username']
 ${PASSWORD_FIELD}             //input[@name='password']
-${LOGIN_BUTTON}               //button[@type='submit'][text()='Log in']
+${LOGIN_BUTTON}               //div[text()='Log In']//parent::button[@type='submit']
 ${SHOWPASSWORD_BUTTON}        //button[@type='button'][text()='Show']
 ${ERROR_MESSAGE}              //p[@id='slfErrorAlert']
 
