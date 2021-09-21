@@ -31,7 +31,7 @@ This is automated web testing for any web application. Its using page object mod
 ### Chromedriver
 1. Install _[Chromedriver](https://chromedriver.chromium.org/)_ using _brew_ in _Terminal_ using the following command
   ```sh
-  $ brew cask install chromedriver
+  $ brew install chromedriver --cask
   ```
 2. Follow the instructions until _chromedriver_ installing success
 
@@ -43,7 +43,7 @@ This is automated web testing for any web application. Its using page object mod
 2. Follow the instructions until _python_ installating success
 
 ### Setup Python Path
-1. Create and open your .bash_profile from _Terminal_
+1. Create and open your .bash_profile or .zshrc from _Terminal_
   ```sh
   $ cd
   $ touch .bash_profile
