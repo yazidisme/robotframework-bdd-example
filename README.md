@@ -51,7 +51,7 @@ This is automated web testing for any web application. Its using page object mod
   ```
 2. Set the _python_ PATH in .bash_profile file
   ```
-  PATH="/Library/Frameworks/Python.framework/Versions/x.xx/bin:${PATH}"
+  PATH="/usr/local/opt/python/libexec/bin:${PATH}"
   export PATH;
   ```
 3. Save and exit your bash_profile
