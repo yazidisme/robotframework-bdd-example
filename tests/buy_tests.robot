@@ -2,7 +2,7 @@
 Resource                ../resources.robot
 Resource                ../steps/buy_steps.robot
 Test Setup              Open Sign In Page Using Chrome Browser
-#Test Teardown          Close Browser
+Test Teardown          Close Browser
 
 *** Variables ***
 ${existing_email}       solabanabasle+test@gmail.com
