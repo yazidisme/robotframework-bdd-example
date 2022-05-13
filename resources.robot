@@ -2,14 +2,15 @@
 Library       SeleniumLibrary
 
 *** Variables ***
-${MAIN_PAGE}      https://www.instagram.com
-${LOGIN_PAGE}     ${MAIN_PAGE}/accounts/login/
+${MAIN_PAGE}                http://automationpractice.com/index.php
+${SIGN_IN_PAGE}             ${MAIN_PAGE}?controller=authentication&back=my-account
+${CREATE_ACCOUNT_PAGE}      ${SIGN_IN_PAGE}\#account-creation
 
 *** Keywords ***
 Open Main Page Using Chrome Browser
   Open Browser    ${MAIN_PAGE}    Chrome
   Maximize Browser Window
 
-Open Login Page Using Chrome Browser
-  Open Browser    ${LOGIN_PAGE}   Chrome
+Open Sign In Page Using Chrome Browser
+  Open Browser    ${SIGN_IN_PAGE}   Chrome
   Maximize Browser Window
